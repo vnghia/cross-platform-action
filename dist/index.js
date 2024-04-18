@@ -2118,7 +2118,7 @@ class ResourceDisk {
     create() {
         return __awaiter(this, void 0, void 0, function* () {
             core.debug('Creating resource disk');
-            yield this.createDiskFile('40m', this.diskPath);
+            yield this.createDiskFile('15g', this.diskPath);
             this.devicePath = yield this.createDiskDevice(this.diskPath);
             yield this.partitionDisk(this.devicePath, this.mountName);
             this.mountPath = yield this.mountDisk(this.devicePath, this.baseMountPath);
