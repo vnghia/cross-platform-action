@@ -39,7 +39,7 @@ export default abstract class ResourceDisk {
   async create(): Promise<string> {
     core.debug('Creating resource disk')
 
-    await this.createDiskFile('30g', this.diskPath)
+    await this.createDiskFile('15g', this.diskPath)
     this.devicePath = await this.createDiskDevice(this.diskPath)
     await this.partitionDisk(this.devicePath, this.mountName)
     this.mountPath = await this.mountDisk(this.devicePath, this.baseMountPath)
